@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/game/Main.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/network/MultiplayerManager.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/Arena.tscn" id="3"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1")
+
+[node name="Arena" parent="." instance=ExtResource("3")]
+
+[node name="Players" type="Node3D" parent="."]
+
+[node name="MultiplayerManager" type="Node" parent="."]
+script = ExtResource("2")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DebugPanel" type="Panel" parent="UI"]
+offset_right = 500.0
+offset_bottom = 250.0
+
+[node name="DebugLabel" type="Label" parent="UI/DebugPanel"]
+offset_right = 480.0
+offset_bottom = 220.0
+text = "F3 multiplayer debug"
