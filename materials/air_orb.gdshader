@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode blend_mix, cull_back, depth_draw_alpha_prepass;
+render_mode blend_mix, cull_back, depth_prepass_alpha;
 
 uniform vec4 glow_color : source_color = vec4(0.4, 0.8, 1.0, 0.7);
 uniform float fresnel_power = 2.4;
